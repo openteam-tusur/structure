@@ -1,0 +1,29 @@
+<h1>Структура факультетов ТУСУР</h1>
+<ul>
+  <% @faculties.each do |faculty| %>
+    <li class="faculty">
+      <h2>
+        <%= faculty %>
+        <div class="actions">
+          <%= link_to "править", edit_faculty_path(faculty) %>
+          <%= link_to "удалить", faculty_path(faculty), :method => :delete, :data => { :confirm => 'Вы уверены в том что, хотите удалить факультет?' } %>
+          <%= link_to "добавить кафедру", new_faculty_subdepartment_path(faculty) %>
+        </div>
+      </h2>
+      <ul>
+        <% faculty.subdepartments.each do |subdepartment| %>
+          <li class="subdepartment">
+            <h3>
+              <%= subdepartment %>
+              <div class="actions">
+                <%= link_to "править", edit_faculty_subdepartment_path(faculty, subdepartment) %>
+                <%= link_to "удалить", faculty_subdepartment_path(faculty, subdepartment), :method => :delete, :data => { :confirm => 'Вы уверены в том что, хотите удалить кафедру?' } %>
+              </div>
+            </h3>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Добавить факультет", new_faculty_path %> | <%= link_to "JSON", faculties_path(:format => :json) %>

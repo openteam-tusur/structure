@@ -1,0 +1,9 @@
+<%= simple_form_for @faculty do |f| %>
+  <%= f.input :abbr %>
+  <%= f.input :title %>
+
+  <div class="buttons">
+    <%= f.submit 'Сохранить' %>
+    <%= link_to 'Отмена', collection_path %>
+  </div>
+<% end %>

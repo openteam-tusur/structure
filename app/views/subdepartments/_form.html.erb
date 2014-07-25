@@ -1,0 +1,11 @@
+<%= simple_form_for [@faculty, @subdepartment] do |f| %>
+  <%= f.association :faculty %>
+  <%= f.input :abbr %>
+  <%= f.input :title %>
+
+  <div class="buttons">
+    <%= f.submit 'Сохранить' %>
+    <%= link_to 'Отмена', faculties_path %>
+  </div>
+<% end %>
+

@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: structure
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: structure

@@ -1,0 +1,12 @@
+ru:
+  activerecord:
+    attributes:
+      faculty:
+        abbr:  Аббревиатура
+        title: Название
+
+      subdepartment:
+        abbr:    Аббревиатура
+        faculty: Факультет
+        title:   Название
+
