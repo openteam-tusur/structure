@@ -18,8 +18,7 @@ group :default do
 end
 
 group :development do
-  #gem 'openteam-capistrano', '~> 1.0.8'
-  gem 'openteam-capistrano', :path => '/Users/xamut/projects/openteam-capistrano'
+  gem 'openteam-capistrano', '~> 1.0.10'
 end
 
 group :production do
